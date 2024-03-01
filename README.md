@@ -30,8 +30,8 @@ Each time you build an image with Yocto a cve-scan will be performed and
 the output uploaded to Galapagos. A report will be emailed to the address
 in GALAPAGOS_REPORT_EMAIL. The GALAPAGOS_PRODUCT_NAME variable is used to
 provide a friendly name for your product/image. The GALAPAGOS_PRODUCT_KEY
-uniquely identifies your product to the Galapagos server, if you don't
-have one you can make one up.
+uniquely identifies your product to the Galapagos server, please request
+a key by emailing sales@thegoodpenguin.co.uk.
 
 The GALAPAGOS_REPORT_INTERVAL variable is used to describe how frequently
 the service will send report emails. The available values are:
