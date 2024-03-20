@@ -23,7 +23,7 @@ values below are examples and should be changed to meet your needs.
 
     GALAPAGOS_PRODUCT_NAME="Penguin Feeder X12"
     GALAPAGOS_PRODUCT_KEY="Fd3cPzYEAT5JftYR"
-    GALAPAGOS_REPORT_EMAIL="amurray@thegoodpenguin.co.uk"
+    GALAPAGOS_REPORT_EMAIL="amurray@thegoodpenguin.co.uk,additional@emails.co.uk"
     GALAPAGOS_REPORT_INTERVAL="daily"
 
 Each time you build an image with Yocto a cve-scan will be performed and
