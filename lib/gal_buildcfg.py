@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2024 The Good Penguin Ltd
+#
+# SPDX-License-Identifier: MIT
+#
 # These are re-implemented to match the way Scarthgap does things
 # Only handles git currently
 import os
