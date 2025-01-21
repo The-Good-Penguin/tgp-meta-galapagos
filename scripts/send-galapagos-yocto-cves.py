@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-
+#
+# Copyright (c) 2024 The Good Penguin Ltd
+#
+# SPDX-License-Identifier: MIT
+#
 import requests
 import argparse
 

@@ -1,3 +1,8 @@
+#
+# Copyright (c) 2024 The Good Penguin Ltd
+#
+# SPDX-License-Identifier: MIT
+#
 # This is a basic wrapper for Scarthgap and later around oe.buildcfg
 
 import oe.buildcfg
