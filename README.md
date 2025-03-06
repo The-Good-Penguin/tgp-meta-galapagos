@@ -6,8 +6,14 @@ Artifacts from a Yocto build such as data from Yocto's cve-scan can be
 uploaded to the service, in return the service will analyse the data
 and email a report with recommended mitigation steps.
 
-The Kirkstone meta-galapagos layer provides a means of integrating this
-service into your Yocto build.
+The meta-galapagos layer provides a means of integrating this service into
+your Yocto build.
+
+Galapagos supports Scarthgap, Kirkstone, and Dunfell (after commit
+dcd40cfa375c272eda1ccc3063a48c5ec0a50ab5). Use the appropriate branch
+for the yocto version you are building.
+
+Galapagos requires meta-python and meta-oe layers.
 
 The layer can be added as follows:
 
@@ -17,6 +23,9 @@ Please update your local.conf to include the following:
 
     INHERIT += "cve-check"
     INHERIT += "galapagos-cve-check"
+
+Note that galapagos is incompatible with rm_work so you must not inherit
+rm_work when doing a galapagos build.
 
 The following variables must also be included, please note that the
 values below are examples and should be changed to meet your needs.
@@ -47,3 +56,11 @@ build.
 
 Please note that no specific target is needed, the report will be generated
 upon the completion of a build of any image (e.g. core-image-minimal).
+
+Maintenance
+===========
+
+Send pull requests, patches, comments or questions to mbullock@thegoodpenguin.co.uk
+
+Maintainers: Matthew Bullock <mbullock@thegoodpenguin.co.uk>
+
