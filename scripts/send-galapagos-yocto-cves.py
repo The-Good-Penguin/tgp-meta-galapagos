@@ -26,7 +26,7 @@ headers = {"Product-Key": args.product_key}
 data = {"email": args.email, "product": args.product_name, "interval": args.interval}
 
 if (args.kernel_config):
-    files["config_file"] = open(args.kernel_config)
+    files["config_file"] = open(args.kernel_config, "rb")
 if (args.layers_config):
     files["layers_config"] = open(args.layers_config, "rb")
 
