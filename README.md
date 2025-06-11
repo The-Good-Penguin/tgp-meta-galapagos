@@ -24,8 +24,9 @@ Please update your local.conf to include the following:
     INHERIT += "cve-check"
     INHERIT += "galapagos-cve-check"
 
-Note that galapagos is incompatible with rm_work so you must not inherit
-rm_work when doing a galapagos build.
+Set GALAPAGOS_RECIPE_NAME to the name of the your main image recipe, eg:
+
+    GALAPAGOS_RECIPE_NAME = "core-image-sato"
 
 The following variables must also be included, please note that the
 values below are examples and should be changed to meet your needs.
@@ -61,6 +62,7 @@ Maintenance
 ===========
 
 Send pull requests, patches, comments or questions to mbullock@thegoodpenguin.co.uk
+GitHub pull requests are also welcome.
 
 Maintainers: Matthew Bullock <mbullock@thegoodpenguin.co.uk>
 
