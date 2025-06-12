@@ -9,9 +9,8 @@ and email a report with recommended mitigation steps.
 The meta-galapagos layer provides a means of integrating this service into
 your Yocto build.
 
-Galapagos supports Scarthgap, Kirkstone, and Dunfell (after commit
-dcd40cfa375c272eda1ccc3063a48c5ec0a50ab5). Use the appropriate branch
-for the yocto version you are building.
+Galapagos supports all versions of Yocto after Dunfell commit
+dcd40cfa375c272eda1ccc3063a48c5ec0a50ab5.
 
 Galapagos requires meta-python and meta-oe layers.
 
