@@ -34,6 +34,8 @@ values below are examples and should be changed to meet your needs.
     GALAPAGOS_PRODUCT_KEY="Fd3cPzYEAT5JftYR"
     GALAPAGOS_REPORT_EMAIL="amurray@thegoodpenguin.co.uk,additional@emails.co.uk"
     GALAPAGOS_REPORT_INTERVAL="daily"
+    GALAPAGOS_CVE_SEVERITY_THRESHOLD="3.0" # Optional
+    GALAPAGOS_IGNORED_ATTACK_VECTORS="LOCAL,PHYSICAL" # Optional
 
 Each time you build an image with Yocto a cve-scan will be performed and
 the output uploaded to Galapagos. A report will be emailed to the address
@@ -53,6 +55,14 @@ For the "daily" and "weekly" values, a report is still triggered on a build
 but the report is only sent if there hasn't been any reports sent in the past
 day or week. Thus the email report will always represent the most recent
 build.
+
+The `GALAPAGOS_CVE_SEVERITY_THRESHOLD` is an optional parameter, which allows you to ignore 
+CVEs that are below a set severity threshold. Valid values are `0.0` to `10.0`
+
+The `GALAPAGOS_IGNORED_ATTACK_VECTORS` is an optional parameter. This allows you to ignore
+CVEs where their attack vector matches one provided. Multiple attack vectors can be used
+by deliminating them with a comma (,). Valid options are `PHYSICAL`, `LOCAL`, 
+`ADJACENT_NETWORK` and `NETWORK`.
 
 Please note that no specific target is needed, the report will be generated
 upon the completion of a build of any image (e.g. core-image-minimal).
