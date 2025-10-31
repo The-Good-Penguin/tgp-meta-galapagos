@@ -27,6 +27,12 @@ Set GALAPAGOS_RECIPE_NAME to the name of the your main image recipe, eg:
 
     GALAPAGOS_RECIPE_NAME = "core-image-sato"
 
+If you have additional packages that are not included in the image you
+are building, for example a kernel or bootloader installed elsewhere,
+you can add them to the GALAPAGOS_EXTRA_PACKAGES variable:
+
+    GALAPAGOS_EXTRA_PACKAGES = "linux-yocto u-boot"
+
 The following variables must also be included, please note that the
 values below are examples and should be changed to meet your needs.
 
