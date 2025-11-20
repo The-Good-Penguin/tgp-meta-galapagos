@@ -15,6 +15,7 @@ parser.add_argument("product_key", help="Product API key")
 parser.add_argument("email", help="Email")
 parser.add_argument("interval", help="Min interval of report: build, daily or weekly")
 parser.add_argument("--kernel_config", nargs='?', help="Kernel .config file for KConfig filtering")
+parser.add_argument("--kernel_files", nargs='?', help="Kernel file list filtering")
 parser.add_argument("--layers_config", nargs='?', help="JSON file containing meta layer configuration")
 parser.add_argument("--cve_severity_threshold", help="CVEs below this severity score will be ignored")
 parser.add_argument("--ignored_attack_vectors", help="Comma-seperated list of CVE attack vectors to ignore")
@@ -34,6 +35,8 @@ if (args.ignored_attack_vectors):
 
 if (args.kernel_config):
     files["config_file"] = open(args.kernel_config, "rb")
+if (args.kernel_files):
+    files["kernel_files"] = open(args.kernel_files, "rb")
 if (args.layers_config):
     files["layers_config"] = open(args.layers_config, "rb")
 
