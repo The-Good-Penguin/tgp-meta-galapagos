@@ -38,6 +38,7 @@ values below are examples and should be changed to meet your needs.
 
     GALAPAGOS_PRODUCT_NAME="Penguin Feeder X12"
     GALAPAGOS_PRODUCT_KEY="Fd3cPzYEAT5JftYR"
+    GALAPAGOS_PRODUCT_TAG="main"
     GALAPAGOS_REPORT_EMAIL="amurray@thegoodpenguin.co.uk,additional@emails.co.uk"
     GALAPAGOS_REPORT_INTERVAL="daily"
     GALAPAGOS_CVE_SEVERITY_THRESHOLD="3.0" # Optional
@@ -69,6 +70,9 @@ The `GALAPAGOS_IGNORED_ATTACK_VECTORS` is an optional parameter. This allows you
 CVEs where their attack vector matches one provided. Multiple attack vectors can be used
 by deliminating them with a comma (,). Valid options are `PHYSICAL`, `LOCAL`, 
 `ADJACENT_NETWORK` and `NETWORK`.
+
+The `GALAPAGOS_PRODUCT_TAG` is an optional parameter that allows you to specify an additional 
+string to distinguish between product variations, such as a tag, branch, or version.
 
 Please note that no specific target is needed, the report will be generated
 upon the completion of a build of any image (e.g. core-image-minimal).
