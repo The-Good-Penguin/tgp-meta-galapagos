@@ -18,6 +18,7 @@ parser.add_argument("--kernel_config", nargs='?', help="Kernel .config file for 
 parser.add_argument("--layers_config", nargs='?', help="JSON file containing meta layer configuration")
 parser.add_argument("--cve_severity_threshold", help="CVEs below this severity score will be ignored")
 parser.add_argument("--ignored_attack_vectors", help="Comma-seperated list of CVE attack vectors to ignore")
+parser.add_argument("--product_tag", help="Product tag")
 
 args = parser.parse_args()
 
@@ -31,6 +32,8 @@ if (args.cve_severity_threshold):
     data["cve_severity_threshold"] = args.cve_severity_threshold
 if (args.ignored_attack_vectors):
     data["ignored_attack_vectors"] = args.ignored_attack_vectors
+if (args.product_tag):
+    data["product_tag"] = args.product_tag
 
 if (args.kernel_config):
     files["config_file"] = open(args.kernel_config, "rb")
